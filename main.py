@@ -45,9 +45,8 @@ else:
 
 #Zadanie 6
 zadanie_six = Zadanie_Six()
-string = "A man, a plan, a canal, Panama!"
-if zadanie_six.is_palindrome(string):
-        print(f"'{string}' is a palindrome.")
-else:
-        print(f"'{string}' is not a palindrome.")
+
+print(zadanie_six.dziel(10, 2))
+print(zadanie_six.dziel(10, 0))
+
 
