@@ -1,49 +1,53 @@
-import FunctionOne
-import FunctionsTwo
-import FunctionThree
-
+from Zadanie_One import Zadanie_One
+from Zadanie_Two import Zadanie_Two
+from Zadanie_Three import Zadanie_Three
+from Zadanie_Four import Zadanie_Four
+from Zadanie_Five import Zadanie_Five
+from Zadanie_Six import Zadanie_Six
 
 #Zadanie 1
+list1 = ['A', 'B']
+list2 = ['C', 'D']
 
-FunctionOne.przywitanie()
-
-FunctionOne.przywitanie_imienne('Andrii','Zdrowka')
-
-FunctionOne.liczbydokwadratu(5)
-
-moja_lista = [1, 2, 3, 4, 5]
-wynik_sumy = FunctionOne.suma_listy(moja_lista)
-print("Suma liczb w liście:", wynik_sumy)
-
-print(FunctionOne.generuj_liste_parzystych(10))
+zadanie = Zadanie_One(list1, list2)
+zadanie.generate_combinations()
 
 #Zadanie 2
+elements = ['A', 'B', 'C', 'D']
 
-FunctionsTwo.kalkulator_dodawania(5,40)
+zadanie_two = Zadanie_Two()
+combinations = zadanie_two.generate_combinations(elements)
+print(combinations)
 
 #Zadanie 3
 
-from FunctionThree import funkcja_zmiennymi_funkcyjnymi_i_globalnymi, zmienna_globalna
+zadanie_three = Zadanie_Three()
+fib_gen = zadanie_three.fibonacci_generator()
 
-if __name__ == "__main__":
-    funkcja_zmiennymi_funkcyjnymi_i_globalnymi()
-    print("Zmienna globalna poza funkcją:", zmienna_globalna)
+for _ in range(10):
+        print(next(fib_gen))
 
 #Zadanie 4
 
-from FunctionFour import funkcja_do_przekazania, funkcja_ktora_przyjmuje_inna_funkcje
+liczby = [3, 4, 5, 11, 12, 13]
+zadanie = Zadanie_Four(liczby)
+kwadraty_powyzej_10 = zadanie.kwadraty_powyzej_10()
+print(kwadraty_powyzej_10)
 
-if __name__ == "__main__":
-    print("Wywołanie funkcji funkcja_ktora_przyjmuje_inna_funkcje bezpośrednio w pliku main.py:")
-    funkcja_ktora_przyjmuje_inna_funkcje(funkcja_do_przekazania, 1, 2, 3)
+#Zadanie 5
 
-#Zadaine 5
+zadanie_five = Zadanie_Five()
+string = "A man a plan a canal Panama"
+if zadanie_five.is_palindrome(string):
+        print(f"'{string}' is a palindrome.")
+else:
+        print(f"'{string}' is not a palindrome.")
 
-
-
-
-
-
-
-
+#Zadanie 6
+zadanie_six = Zadanie_Six()
+string = "A man, a plan, a canal, Panama!"
+if zadanie_six.is_palindrome(string):
+        print(f"'{string}' is a palindrome.")
+else:
+        print(f"'{string}' is not a palindrome.")
 
